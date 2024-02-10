@@ -1,0 +1,11 @@
+{
+  "baseBranches": ["main"],
+  "extends": [
+    "config:recommended",
+    ":semanticCommitTypeAll(chore)",
+    ":separateMajorReleases",
+    ":timezone(Asia/Tokyo)"
+  ],
+  "labels": ["dependencies"],
+  "schedule": ["every weekend"]
+}

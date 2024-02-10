@@ -1,0 +1,14 @@
+name: "setup-node"
+description: install node according to package.json engine property & node_modules cache
+
+runs:
+  using: "composite"
+  steps:
+    - uses: pnpm/action-setup@v3
+    - uses: actions/setup-node@v4
+      with:
+        node-verion-file: ./package.json
+        cache: pnpm
+
+    - run: pnpm i --frozen-lockfile
+      shell: bash
