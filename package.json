@@ -9,6 +9,7 @@
     "node": "20.11.0"
   },
   "scripts": {
+    "corepack": "corepack enable pnpm",
     "dev": "remix dev --manual",
     "build": "tsc && remix build",
     "lint": "eslint . --ext .ts --ext .tsx",

@@ -4,4 +4,15 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
   root: true,
+  rules: {
+    "import/order": [
+      "error",
+      {
+        groups: ["builtin", "external", "parent", "sibling", "index"],
+        pathGroupsExcludedImportTypes: [],
+        alphabetize: { order: "asc" },
+        "newlines-between": "never",
+      },
+    ],
+  },
 };
